@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Date Difference Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            text-align: center;
+        }
+
+        form {
+            margin: 20px;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 20px;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Date Difference Calculator</h1>
+
+    <form method="POST">
+        <label>First Date:</label>
+        <input type="date" name="date1" required>
+
+        <label>Second Date:</label>
+        <input type="date" name="date2" required>
+
+        <button type="submit">Calculate</button>
+    </form>
+
+    {% if difference is not none %}
+    <div class="result">
+        Difference: {{ difference }} day(s)
+    </div>
+    {% endif %}
+
+</body>
+
+</html>
